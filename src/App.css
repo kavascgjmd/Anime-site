@@ -36,3 +36,184 @@
     transform: rotate(360deg);
   }
 }
+.add-remove{
+  
+  background-color: black;
+  height: 2rem;
+  width : 2rem;
+  position: absolute;
+  bottom : 1rem;
+  left : 1rem;
+  outline : 0;
+  border : 0;
+  border-radius: 50%;
+  
+}
+.add{
+  
+  position: absolute;
+  bottom : 0;
+  width : 2rem;
+  left : 0;
+  border-radius: 50%;
+
+}
+.base{
+  position:absolute;
+  height: 4.5rem;
+  width: 2rem;
+  bottom : 1rem;
+  left: 1rem;
+}
+.addFavourites{
+  animation-name : addFavourites;
+  animation-iteration-count: 1;
+  animation-duration: 0.25s;
+  position:absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 3.2rem;
+  left : 1rem;
+  height : 2rem;
+  width : 2rem;
+  border-radius: 50%;
+  background-color: white;
+  z-index: 2;
+ 
+}
+@keyframes addFavourites {
+  0%{
+    transform: scale(0.25);
+  }
+  100%{
+    transform: scale(1.1);
+  }
+  
+}
+
+.big :hover{
+  transform: scale(1.1);
+}
+
+
+.ReviewCard{
+  position: absolute;
+  height : 6rem;
+  width : 12rem;
+  top: 14.5rem;
+  left : 2rem;
+  background-color: white;
+  z-index: 2;
+}
+.imgset{
+  overflow: hidden;
+}
+
+::placeholder {
+  color: lightcyan;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: lightcyan;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: lightcyan;
+}
+.profile {
+  height : 20rem;
+  width: 100%;
+  background-color: black;
+}
+.theme{
+  font-family: 'Press Start 2P', cursive;
+}
+.music{
+  z-index: 100;
+}
+.mus >*{
+ height: 4rem;
+ width: 4rem;
+ z-index: 101;
+ 
+}
+.mus :hover{
+  cursor: pointer;
+ transform: scale(1.2);
+}
+.musi :hover{
+  cursor: pointer;
+ transform: scale(1.2);
+}
+.kanashi {
+  position : absolute;
+  background-color: red;
+  height: 7rem   ;
+  width : 80%;
+  top:calc(50vh - 2.5rem);
+  left: calc((100vw - 80%)/2);
+  z-index: 300;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  color : white;
+  justify-content: center;
+}
+.text{
+  
+  position: relative;
+  width: max-content;
+}
+.text::before, .text::after{
+  content: "";
+  
+  position: absolute;
+  top: 0;
+  right : 0;
+  bottom : 0;
+  left : 0;
+}
+.text::before{
+  background-color: red;
+ 
+  animation : typewriter 4s steps(24) 1s forwards;
+}
+.text::after{
+  width: 0.125rem;
+  background-color: black;
+  animation: typewriter 4s steps(24) 1s forwards,
+             blink 750ms steps(24) infinite;
+}
+.counter{
+  transform: translateY(3rem);
+  opacity: 0;
+  animation: fadeupin 2s ease 6s forwards;
+}
+@keyframes typewriter {
+  to{
+    left: 100%;
+  }
+}
+@keyframes blink {
+  to{
+    background-color: transparent;
+  }
+  
+}
+@keyframes fadeupin {
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+}
+.rock{
+  background-color: black;
+  height: 60vh;
+  width: 60vw;
+  position: absolute;
+  top : 20vh;
+  left : 20vw;
+   z-index: 500;}
